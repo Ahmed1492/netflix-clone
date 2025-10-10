@@ -1,0 +1,29 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  font-family: "Roboto";
+}
+.navbar {
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.7),
+    10%,
+    transparent
+  );
+  z-index: 1;
+}
+
+.nav-drop-down {
+  display: none;
+  width: 12rem;
+  top: 40px;
+  right: 6px;
+  transition: all 0.7s;
+  padding: 15px 10px;
+  text-align: center;
+}
+
+.nav-drop-down-icon:hover .nav-drop-down {
+  display: block;
+}
