@@ -4,6 +4,7 @@ import search_icon from "../assets/search_icon.svg";
 import bell_icon from "../assets/bell_icon.svg";
 import profile_img from "../assets/profile_img.png";
 import caret_icon from "../assets/caret_icon.svg";
+import { signout } from "../firebase";
 const Navbar = () => {
   const navRef = useRef();
 
@@ -54,7 +55,7 @@ const Navbar = () => {
             className="w-3 cursor-pointer "
           />
           <div className="bg-gray-900  absolute nav-drop-down  rounded-md ">
-            <p className="cursor-pointer  border-b w-max text-center m-auto">
+            <p onClick={()=>signout()} className="cursor-pointer  border-b w-max text-center m-auto">
               Sign Out of Netflix
             </p>
           </div>
