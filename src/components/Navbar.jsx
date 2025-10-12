@@ -1,12 +1,26 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import logo from "../assets/logo.png";
 import search_icon from "../assets/search_icon.svg";
 import bell_icon from "../assets/bell_icon.svg";
 import profile_img from "../assets/profile_img.png";
 import caret_icon from "../assets/caret_icon.svg";
 const Navbar = () => {
+  const navRef = useRef();
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY >= 80) {
+        navRef.current.classList.add("bg-gray-800");
+      } else {
+        navRef.current.classList.remove("bg-gray-800");
+      }
+    });
+  }, []);
   return (
-    <div className="navbar px-[7%] py-[2rem] flex items-center justify-between text-[#e5e5e5] ">
+    <div
+      ref={navRef}
+      className="navbar px-[7%] fixed w-full  top-0 py-[20px] flex items-center justify-between text-[#e5e5e5]  z-30"
+    >
       {/* LEFT */}
       <div className="flex items-center gap-[3rem]">
         <img src={logo} alt="logo" className="w-22" />
@@ -40,7 +54,9 @@ const Navbar = () => {
             className="w-3 cursor-pointer "
           />
           <div className="bg-gray-900  absolute nav-drop-down  rounded-md ">
-            <p className="cursor-pointer  border-b w-max text-center m-auto">Sign Out of Netflix</p>
+            <p className="cursor-pointer  border-b w-max text-center m-auto">
+              Sign Out of Netflix
+            </p>
           </div>
         </div>
       </div>
