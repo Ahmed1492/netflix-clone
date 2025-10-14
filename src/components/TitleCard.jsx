@@ -49,7 +49,7 @@ const TitleCard = ({ title, category }) => {
             <img
               src={"https://image.tmdb.org/t/p/w500/" + item.poster_path}
               alt={item.title}
-              className=" w-[18rem]"
+              className="w-[10rem] sm:w-[14rem] lg:w-[18rem]"
             />
             <p className="absolute  px-3 z-10 bottom-1 right-1 font-semibold">
               {item.title}

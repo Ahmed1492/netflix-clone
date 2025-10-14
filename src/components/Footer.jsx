@@ -7,10 +7,10 @@ import youtube_icon from "../assets/youtube_icon.png";
 
 const Footer = () => {
   return (
-    <div className="px-[20%] py-[2rem]">
-      <div className="  flex items-center justify-between ">
+    <div className="px-[10%] md:px-[20%] mt-[5rem] text-sm md:text-base py-[2rem]">
+      <div className="flex items-center flex-col justify-center gap-y-[3rem] text-center md:text-left  md:flex-row md:justify-between ">
         <ul className="flex flex-col gap-3">
-          <div className="flex items-center gap-4 mb-[22px]">
+          <div className="flex  items-center gap-4 mb-[22px]">
             <img src={facebook_icon} alt="facebook_icon" className="w-7" />
             <img src={instagram_icon} alt="instagram_icon" className="w-7" />
             <img src={twitter_icon} alt="twitter_icon" className="w-7" />
@@ -20,23 +20,23 @@ const Footer = () => {
           <li>Investor Relation</li>
           <li>Legal Notices</li>
         </ul>
-        <ul className="flex flex-col  gap-3 self-end">
+        <ul className="flex flex-col  gap-3 md:self-end">
           <li>Help Center</li>
           <li>Jobs</li>
           <li>Cookie Preferences</li>
         </ul>
-        <ul className="flex flex-col gap-3 self-end">
+        <ul className="flex flex-col gap-3 md:self-end">
           <li>Gift Cards</li>
           <li>Terms Of Use</li>
           <li>Carporate Information</li>
         </ul>
-        <ul className="flex flex-col gap-3 self-end">
+        <ul className="flex flex-col gap-3 md:self-end">
           <li>Media Center</li>
           <li>Privacy</li>
           <li>Contact Us</li>
         </ul>
       </div>
-      <p className="text-gray-600 mt-4">@1997-2025 Netflix,Inc.</p>
+      <p className="text-gray-600 text-center md:text-left mt-4">@1997-2025 Netflix,Inc.</p>
     </div>
   );
 };

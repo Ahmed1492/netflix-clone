@@ -28,7 +28,7 @@ const Player = () => {
       .catch((err) => console.error(err));
   }, [id]);
   return (
-    <div className="h-[100vh] flex flex-col items-center px-[4%] justify-center">
+    <div className="h-[70vh] md:h-[100vh] flex flex-col items-center px-[4%] justify-center">
       <img
         onClick={() => {
           if (window.history.length > 1) {
@@ -49,7 +49,7 @@ const Player = () => {
         height="90%"
         frameBorder="0"
       ></iframe>
-      <div className=" w-full flex items-center justify-between mt-5 text-lg ">
+      <div className=" w-full flex-col sm:flex-row flex items-center justify-between mt-5 text-lg ">
         <p> {movieDetails?.published_at?.slice(0, 10)}</p>
         <p>{movieDetails?.name || "test"}</p>
         <p> {movieDetails?.type}</p>
