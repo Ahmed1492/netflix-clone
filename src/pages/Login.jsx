@@ -12,6 +12,9 @@ const Login = () => {
 
   const userAuth = async (event) => {
     event.preventDefault();
+    if (!email || !password) {
+      toast.error("all fields required");
+    }
 
     try {
       setLoading(true);
@@ -52,6 +55,7 @@ const Login = () => {
         </h2>
         {status !== "login" && (
           <input
+            required
             className="px-4 py-3  bg-[#474747] outline-none rounded-md"
             type="text"
             placeholder="Your name"
@@ -61,6 +65,7 @@ const Login = () => {
           />
         )}
         <input
+          required
           className="px-4 py-3  bg-[#474747] outline-none rounded-md "
           type="email"
           placeholder="Email"
@@ -69,6 +74,7 @@ const Login = () => {
           value={email}
         />
         <input
+          required
           className="px-4 py-3  bg-[#474747] outline-none rounded-md "
           type="password"
           placeholder="Password"
