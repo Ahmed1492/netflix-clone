@@ -13,7 +13,7 @@ const Login = () => {
   const userAuth = async (event) => {
     event.preventDefault();
     if (!email || !password) {
-      toast.error("all fields required");
+      return toast.error("all fields required");
     }
 
     try {
