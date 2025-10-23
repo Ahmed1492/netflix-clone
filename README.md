@@ -45,7 +45,7 @@ It integrates **Firebase** for user management and **TMDB API** for fetching mov
 ---
 
 ## 🌐 Live Demo
-.
+[.](https://netflix-clone-lilac-pi-47.vercel.app/login)
 
 ---
 
